@@ -323,20 +323,27 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Afiliate<br></h2>
         </div>
-
+      
         <div class="container">
           <div class="affiliate-form">
             <h2>CONVIÉRTETE EN AFILIADO</h2>
             <p>Disfruta de descuentos, acceso a contenido exclusivo y oportunidades de networking.</p>
-            <form>
-              <input type="text" placeholder="Nombre*" required>
-              <input type="text" placeholder="Número*" required>
-              <input type="email" placeholder="Correo electrónico*" required>
-              <textarea placeholder="Escribe un mensaje" rows="3"></textarea>
+            <form action="https://formsubmit.co/caturanzoategui@gmail.com" method="POST" enctype="multipart/form-data">
+              <input type="text" name="name" placeholder="Nombre" required>
+              <input type="text" name="phone" placeholder="Número de Telefono" required>
+              <input type="email" name="email" placeholder="Correo electrónico*" required>
+              <textarea name="message" placeholder="Escribe un mensaje" rows="3"></textarea>
               <div class="file-upload">
                 <label for="file-upload">Subir archivo</label>
-                <input type="file" id="file-upload" hidden>
+                <input type="file" name="attachment" id="file-upload" hidden>
+                <span class="file-name"></span>
               </div>
+              <div class="sending-message" style="display: none;">
+                <input type="hidden" name="_next" value="https://caturanz.github.io/Caturanz">
+                <p>Enviando mensaje...</p>
+              </div>
+              <input type="hidden" name="_autoresponse" value="Gracias por enviar tu solicitud de afiliación. Te contactaremos pronto.">
+              <input type="hidden" name="_next" value="https://example.com/thank-you">
               <button type="submit">Subir afiliación</button>
             </form>
           </div>
@@ -484,10 +491,13 @@
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://caturanz.github.io/Caturanz/">
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Gracias por tu mensaje</div>
+                  <div class="sent-message">Gracias por tu mensaje
+                  </div>
                   <button type="submit">Enviar</button>
                 </div>
               </div>
