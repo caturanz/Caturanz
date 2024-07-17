@@ -179,40 +179,25 @@
 
 })();
 
-$(document).ready(function(){
-  $('.customer-logos').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2
-        }
-      }
-    ]
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentIndex = 0;
+
+function showItem(index) {
+  carouselItems.forEach((item, i) => {
+    item.style.transform = `translateX(${(i - index) * 100}%)`;
   });
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  showItem(currentIndex);
 });
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  showItem(currentIndex);
+});
+
+showItem(currentIndex);
