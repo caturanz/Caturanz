@@ -1326,6 +1326,7 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+
 h2{
   text-align:center;
   padding: 20px;
@@ -1337,7 +1338,8 @@ h2{
 }
 
 .slick-slide img {
-    width: 100%;
+  width: 130%;
+  height: auto;
 }
 
 .slick-slider
@@ -1445,6 +1447,28 @@ h2{
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+@media (min-width: 1200px) {
+  .slick-slide img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Styles for medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .slick-slide img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  .slick-slide img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /*--------------------------------------------------------------
