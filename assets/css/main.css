@@ -1415,10 +1415,7 @@ section,
 {
     float: right;
 }
-.slick-slide img
-{
-    display: block;
-}
+
 .slick-slide.slick-loading img
 {
     display: none;
@@ -1552,114 +1549,6 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Buy Tickets Section
---------------------------------------------------------------*/
-.buy-tickets .pricing-item {
-  background-color: var(--surface-color);
-  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-  padding-bottom: 30px;
-  position: relative;
-}
-
-.buy-tickets .pricing-item h3 {
-  font-weight: 700;
-  margin-bottom: 0;
-  font-size: 24px;
-}
-
-.buy-tickets .pricing-item h4 {
-  font-size: 48px;
-  color: var(--accent-color);
-  font-weight: 400;
-  font-family: var(--heading-font);
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.buy-tickets .pricing-item h4 sup {
-  font-size: 28px;
-}
-
-.buy-tickets .pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  font-size: 18px;
-}
-
-.buy-tickets .pricing-item ul {
-  padding: 20px 0;
-  list-style: none;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  text-align: left;
-  line-height: 20px;
-}
-
-.buy-tickets .pricing-item ul li {
-  padding-top: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.buy-tickets .pricing-item ul i {
-  color: #059652;
-  font-size: 24px;
-  padding-right: 3px;
-}
-
-.buy-tickets .pricing-item ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.buy-tickets .pricing-item ul .na i {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.buy-tickets .pricing-item ul .na span {
-  text-decoration: line-through;
-}
-
-.buy-tickets .buy-btn {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  transition: none;
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.3s;
-  font-family: var(--heading-font);
-}
-
-.buy-tickets .buy-btn:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.buy-tickets .featured {
-  background: var(--accent-color);
-}
-
-.buy-tickets .featured h3,
-.buy-tickets .featured h4,
-.buy-tickets .featured h4 span,
-.buy-tickets .featured ul,
-.buy-tickets .featured ul .na,
-.buy-tickets .featured ul i,
-.buy-tickets .featured ul .na i {
-  color: var(--contrast-color);
-}
-
-.buy-tickets .featured .buy-btn {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border-color: var(--contrast-color);
-}
-
-.buy-tickets .featured .buy-btn:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
-  color: var(--contrast-color);
-}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -1748,48 +1637,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/*--------------------------------------------------------------
-# Events Section
---------------------------------------------------------------*/
-.events .details h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.events .details .social {
-  margin-bottom: 15px;
-}
-
-.events .details .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.events .details .social a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.events .details .social a i {
-  font-size: 16px;
-  line-height: 0;
-}
-
-.events .details p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 15px;
-  margin-bottom: 10px;
-}
 
 /*--------------------------------------------------------------
 # Starter Section Section
