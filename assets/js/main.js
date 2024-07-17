@@ -178,26 +178,3 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
-
-const carouselItems = document.querySelectorAll('.carousel-item');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-let currentIndex = 0;
-
-function showItem(index) {
-  carouselItems.forEach((item, i) => {
-    item.style.transform = `translateX(${(i - index) * 100}%)`;
-  });
-}
-
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-  showItem(currentIndex);
-});
-
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % carouselItems.length;
-  showItem(currentIndex);
-});
-
-showItem(currentIndex);
