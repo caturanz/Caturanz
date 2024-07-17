@@ -178,3 +178,38 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+const carousel = document.getElementById('carousel');
+
+    let intervalId;
+
+    // Start the carousel animation
+    intervalId = setInterval(() => {
+      const carouselInner = carousel.querySelector('.carousel-inner');
+      carouselInner.style.transform = 'translateX(-100%)';
+
+      // Wait for the animation to complete before resetting the position
+      setTimeout(() => {
+        carouselInner.style.transform = 'translateX(0)';
+        carouselInner.appendChild(carouselInner.firstElementChild);
+      }, 150000);
+
+      // Check if the current image is "Logo 28"
+      const currentImage = carouselInner.firstElementChild;
+      if (currentImage.alt === 'Logo 28') {
+        clearInterval(intervalId);
+
+        // Wait for the animation to complete before resetting to "Logo 1"
+        setTimeout(() => {
+          carouselInner.style.transform = 'translateX(0)';
+          carouselInner.insertBefore(carouselInner.lastElementChild, carouselInner.firstElementChild);
+          intervalId = setInterval(() => {
+            carouselInner.style.transform = 'translateX(-100%)';
+            setTimeout(() => {
+              carouselInner.style.transform = 'translateX(0)';
+              carouselInner.appendChild(carouselInner.firstElementChild);
+            }, 150000);
+          }, 150000);
+        }, 150000);
+      }
+    }, 150000);
