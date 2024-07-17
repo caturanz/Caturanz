@@ -1336,8 +1336,8 @@ section,
 
 .carousel-inner {
   display: flex;
-  width: 3800px; /* Ancho total de las imágenes */
-  animation: carousel 38s infinite linear;
+  width: 5600px; /* Ancho total de las imágenes */
+  animation: carousel 50s infinite linear;
 }
 
 .carousel-inner img {
@@ -1360,6 +1360,10 @@ section,
 }
 
 @media (max-width: 768px) {
+  .carousel-inner {
+    width: 4000px; /* Ancho total de las imágenes */
+    animation: carousel 36s infinite linear;
+  }
   .carousel-inner img {
     width: 16%;
     margin: 0 1%;
@@ -1367,8 +1371,12 @@ section,
 }
 
 @media (max-width: 480px) {
+  .carousel-inner {
+    width: 2800px; /* Ancho total de las imágenes */
+    animation: carousel 25s infinite linear;
+  }
   .carousel-inner img {
-    width: 30%;
+    width: 22%;
     margin: 0 1.5%;
   }
 }
